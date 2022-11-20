@@ -1,0 +1,10 @@
+// stylelint-disable no-empty-source
+// @include font-face("../fonts/FontName/FontName", "FontName", 400, normal);
+//@include font-face("../fonts/Popins/Poppins-Regular", "Popins", 400, normal);
+//@include font-face("../fonts/Popins/Poppins-Medium", "Popins", 500, normal);
+//@include font-face("../fonts/Popins/Poppins-Bold", "Popins", 700, normal);
+//@include font-face("../fonts/Popins/Poppins-ExtraBold", "Popins", 900, normal);
+@include font-face("Poppins", 400);
+@include font-face("Poppins", 500);
+@include font-face("Poppins", 700);
+@include font-face("Poppins", 800);

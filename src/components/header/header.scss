@@ -1,0 +1,64 @@
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    padding: 25px 0;
+
+    &-logo {
+        width: 107.14px;
+        height: 40px;
+    }
+
+    &-nav {
+        position: relative;
+        left: 23px;
+        top: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            li {
+                margin: 0 26px;
+            }
+
+            a {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                color: $color-white;
+
+                opacity: 0.6;
+
+                @include hover {
+                    font-weight: 500;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-link {
+        position: relative;
+        top: 6px;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: $color-white;
+
+        svg {
+            margin-right: 12px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

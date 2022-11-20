@@ -1,0 +1,48 @@
+-
+    const dataWorks = [
+        {
+            text: 'Enter Aniseed Earth for free and choose the project you would like to support'
+        },
+        {
+            text: 'Complete daily tasks and challenges that reflect real world dangers'
+        },
+        {
+            text: 'Watch the environment grow dynamically as the project grows'
+        },
+        {
+            text: 'Enjoy exclusive benefits from the projects'
+        },
+        {
+            text: 'Buy, sell and trade Climate Collectibles on Aniseed'
+        },
+        {
+            label: true,
+            text: 'Fill your own virtual land as both a collectible and in the virtual world'
+        },
+    ]
+
+section.section.section--5(data-scroll-section data-router-page="works")
+    .container
+        .title.title-md.uppercase.mb-24
+            | How it #[span works]
+        each item, index in dataWorks
+            .card.card-line.mb-11
+                .icon.icon-68
+                    img(src=`${baseDir}assets/images/works/${index + 1}.png` alt=`${index + 1}`)
+
+                .inner
+                    if item.label
+
+                        .title.title-sm.mb-10.top
+                            | 0
+                            !=index + 1
+                            .label
+                                | Coming soon
+                    else
+                        .title.title-sm.mb-10
+                            | 0
+                            !=index + 1
+                    .text-xlg
+                        !=item.text
+        .grass
+            img(src=`${baseDir}assets/images/works/7.png` alt=`7`)

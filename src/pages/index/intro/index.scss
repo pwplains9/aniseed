@@ -1,0 +1,58 @@
+
+
+.sphere {
+    position: absolute;
+    top: -19%;
+    right: 50%;
+    transform: translateX(81%);
+    width: 1442px;
+    height: 1419px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &-info {
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, #6EB738 0%, #148F6F 100%);
+        box-shadow: 0px 4px 0px #107953, 0px 12px 12px rgba(0, 0, 0, 0.25), 0px 20px 42px rgba(16, 121, 83, 0.36);
+        border-radius: 64px;
+        width: 80px;
+        height: 80px;
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 80px;
+        }
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        &--1 {
+            top: 27%;
+            right: 57%;
+        }
+
+        &--2 {
+            top: 39.5%;
+            right: 63.5%;
+        }
+
+        &--3 {
+            top: 47.5%;
+            right: 50%;
+        }
+    }
+}
