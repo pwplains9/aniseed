@@ -1,7 +1,5 @@
 # Информация о проекте
 
-Репозиторий: https://bitbucket.org/ninelines/tass-template
-
 # Подготовка билда для прода
 
 1. В файле ``config.js`` меняем значение свойства ``prod`` на ``true``
