@@ -32,10 +32,10 @@
 section.section.section--7(data-scroll-section data-router-page="faq")
     .container.container--right
         .blure.blure--5.blure--lg
-        .title.title-md.uppercase.title-width-50.mb-24
+        .title.title-md.uppercase.title-width-50.mb-24.anim-fade(data-scroll)
             | FAQ
         each item, index in dataFaq
-            .card.faq
+            .card.faq.anim-fade(data-scroll)
                 .faq-content
                     .faq-title.text-xxl
                         !=item.title

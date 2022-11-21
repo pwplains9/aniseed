@@ -1,8 +1,8 @@
 export const config = {
     html: { // настройки для html
-        publicPath: '/specialview/', // путь к файлам для продакшн версии
+        publicPath: '/', // путь к файлам для продакшн версии
         publicPathDev: '/', // путь к файлам для версии разработки
-        domain: 'https://spec.tass.ru/specialview/', // домен проекта
+        domain: '/', // домен проекта
         isProd: () => false, // isProd = true - используется publicPath; isProd = false - используется publicPathDev
     },
     javascript: { // настройки для js

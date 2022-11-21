@@ -201,3 +201,21 @@ canvas {
 .c-scrollbar_thumb {
     background: $gradient;
 }
+
+.anim-fade {
+    position: relative;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity .6s cubic-bezier(.215,.61,.355,1),transform .6s cubic-bezier(.215,.61,.355,1);
+
+    &.is-inview {
+        opacity: 1;
+        transform: none;
+    }
+
+    @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+            transition-delay: $i * 0.1 + s;
+        }
+    }
+}

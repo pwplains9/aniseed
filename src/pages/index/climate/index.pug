@@ -24,7 +24,7 @@ section.section.section--3(data-scroll-section)
     .container.container--cards
         .blure.blure--1.blure--lg
         each item, index in dataClimate
-            .block(class=`block--${index}`)
+            .block.anim-fade(data-scroll class=`block--${index}`)
                 .image
                     img(src=`${baseDir}assets/images/climate/${index + 1}.png` alt=`${index + 1}`)
                 .card.card-3.card--cards.center

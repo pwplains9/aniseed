@@ -37,7 +37,7 @@
 section.section.section--2(data-scroll-section)
     .container.container--cards
         each item, index in dataCards
-            .card.card-4.card--cards.center
+            .card.card-4.card--cards.center.anim-fade(data-scroll)
                 .icon.icon-40
                     img(src=`${baseDir}assets/images/cards/${index + 1}.png` alt=`${index + 1}`)
                 .text-xlg.mb-14-3

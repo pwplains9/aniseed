@@ -2,7 +2,7 @@ section.section.section--1(data-scroll-section data-router-page="home")
     include @components/header/header
     .blure-image
         img(src=`${baseDir}assets/images/intro/blure.png` alt="blure")
-    .container
+    .container(data-scroll data-scroll-speed="1" data-scroll-position="top")
         .label.mb-8
             | Aniseed Earth
         .title.title-xlg.uppercase.mb-24
@@ -28,7 +28,7 @@ section.section.section--1(data-scroll-section data-router-page="home")
                 | Coming soon...
     .sphere
         img(src=`${baseDir}assets/images/intro/sphere.png` alt="sphere")
-        .sphere-info.sphere-info--1
+        .sphere-info.sphere-info--1(data-scroll data-scroll-speed="1" data-scroll-position="top")
             span
                 <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12.9598 11.0861L15.9339 6.25327C16.2857 5.68158 16.9089 5.33334 17.5802 5.33334C18.7649 5.33334 19.6709 6.38935 19.4907 7.5603L19.1667 9.66667C18.8161 11.9452 20.579 14 22.8843 14H23.804C27.1867 14 29.3868 17.5598 27.874 20.5854L26.3426 23.6481C25.2133 25.9066 22.9049 27.3333 20.3798 27.3333H16.5C14.7028 27.3333 13.1133 26.4444 12.147 25.0823C12.16 24.9455 12.1667 24.8069 12.1667 24.6667V14C12.1667 13.5587 12.1007 13.1327 11.9781 12.7316C12.2144 12.2975 12.529 11.7862 12.9598 11.0861Z" fill="white"/>
@@ -36,7 +36,7 @@ section.section.section--1(data-scroll-section data-router-page="home")
                 </svg>
 
 
-        .sphere-info.sphere-info--2
+        .sphere-info.sphere-info--2(data-scroll data-scroll-speed="2" data-scroll-position="top")
             span
                 <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M30.4585 9.81906C31.2733 5.57026 27.5432 1.8401 23.2944 2.65495L11.0956 4.99448C8.44386 5.50305 6.32313 7.51031 5.64936 10.1185C4.30415 15.326 9.13353 20.0852 14.319 18.5603C14.4622 18.5182 14.5952 18.6512 14.5531 18.7944C13.0282 23.9799 17.7875 28.8093 22.9949 27.4641C25.6032 26.7903 27.6104 24.6696 28.119 22.0178L30.4585 9.81906Z" fill="white"/>
@@ -46,7 +46,7 @@ section.section.section--1(data-scroll-section data-router-page="home")
                 </svg>
 
 
-        .sphere-info.sphere-info--3
+        .sphere-info.sphere-info--3(data-scroll data-scroll-speed="3" data-scroll-position="top")
             span
                 <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.2297 9.32458C15.3185 9.27335 15.4087 9.22729 15.5 9.1863V14.5599C13.3306 13.6019 13.1275 10.5383 15.2297 9.32458Z" fill="white"/>

@@ -23,10 +23,10 @@
 
 section.section.section--5(data-scroll-section data-router-page="works")
     .container
-        .title.title-md.uppercase.mb-24
+        .title.title-md.uppercase.mb-24.anim-fade(data-scroll)
             | How it #[span works]
         each item, index in dataWorks
-            .card.card-line.mb-11
+            .card.card-line.mb-11.anim-fade(data-scroll)
                 .icon.icon-68
                     img(src=`${baseDir}assets/images/works/${index + 1}.png` alt=`${index + 1}`)
 
