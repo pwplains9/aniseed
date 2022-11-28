@@ -12,6 +12,7 @@ const goToPage = (e) => {
     const $page = document.querySelector(`[data-router-page="${page}"]`);
 
     if ($page) {
+        // scroller.scrollToEl($page)
         scroller.setPosition($page, {
             offset: e.currentTarget.dataset.page === 'home'? 100 : 1,
             // callback: close,
@@ -20,13 +21,9 @@ const goToPage = (e) => {
 };
 
 const setActiveLink = (page) => {
-
-
     $link.forEach(($linkCurrent) => {
         $linkCurrent.classList.toggle('is-active', page === $linkCurrent.dataset.page);
     });
-
-
 };
 
 const linkClick = (e) => {
@@ -36,6 +33,8 @@ const linkClick = (e) => {
         goToPage(e);
     } else if (isDevices) {
         setActiveLink(e.currentTarget.dataset.page);
+        goToPage(e);
+        closeMenu();
     }
 };
 
@@ -45,7 +44,7 @@ function openMenu() {
 	return new Promise((resolve) => {
 		$('.js-burger').addClass('is-disabled').attr('disabled', true);
 
-		helpers.lockScroll(true, helpers.$header.find('.header__menu'), 'header');
+		helpers.lockScroll(true, helpers.$header.find('.header-nav'), 'header');
 
 		helpers.$header.addClass('is-menu-opened');
 		$('.header__menu').removeClass('is-hidden');
@@ -68,7 +67,7 @@ function closeMenu() {
 	return new Promise((resolve) => {
 		$('.js-burger').addClass('is-disabled').attr('disabled', true);
 
-		helpers.lockScroll(false, helpers.$header.find('.header__menu'), 'header');
+		helpers.lockScroll(false, helpers.$header.find('.header-nav'), 'header');
 		$('body').css('padding-right', '');
 		helpers.$header.css('right', '');
 
@@ -105,7 +104,7 @@ function init() {
 
 	helpers.$document
 		.on('click.header', (e) => {
-			let $container = $('.header__menu');
+			let $container = $('.header-nav');
 
 			if ($container.is(e.target) && $container.has(e.target).length === 0 && $container.hasClass('is-active')) {
 				closeMenu();
@@ -113,7 +112,7 @@ function init() {
 			}
 		})
 		.on('keyup.header', (e) => {
-			if ((e.key === 'Escape' || e.key === 'Esc') && $('.header__menu').hasClass('is-active')) {
+			if ((e.key === 'Escape' || e.key === 'Esc') && $('.header-nav').hasClass('is-active')) {
 				closeMenu();
 				$('.js-burger').removeClass('is-active');
 			}

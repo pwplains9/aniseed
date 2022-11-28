@@ -15,11 +15,15 @@ const getPosition = () => scroller.scroll.instance.scroll.y;
 // 0, false, 1000
 const setPosition = (position, options = {}) => {
     scroller.scrollTo(position, {
-        duration: 0,
+        duration: helpers.isDevices() ? 0: true,
         disableLerp: true,
         ...options,
     });
 };
+
+const scrollToEl = (el) => {
+    scroller.scrollTo(el);
+}
 
 const onScroll = (callback, options = {}) => {
     if (options.once) {
@@ -119,5 +123,6 @@ export default {
     getInstance,
     getElement,
     isScrollLocked,
-    isScrollUnlocked
+    isScrollUnlocked,
+    scrollToEl
 };

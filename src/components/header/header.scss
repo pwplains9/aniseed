@@ -3,12 +3,19 @@
     left: 0;
     right: 0;
     top: 0;
-    z-index: 5;
+    z-index: 10;
     padding: 25px 0;
 
     &-logo {
+        position: relative;
+        z-index: 1;
         width: 107.14px;
         height: 40px;
+
+        @include devices {
+            width: 85.71px;
+            height: 32px;
+        }
     }
 
     &-nav {
@@ -25,6 +32,14 @@
 
             li {
                 margin: 0 26px;
+
+                @include devices {
+                    margin-bottom: vc(52);
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
             }
 
             a {
@@ -39,13 +54,42 @@
                     font-weight: 500;
                     opacity: 1;
                 }
+
+                @include devices {
+                    font-size: 24px;
+                    line-height: 24px;
+                }
+            }
+
+            @include devices {
+                flex-flow: column;
+            }
+        }
+
+        @include devices {
+            position: absolute;
+            left: vc(-16);
+            right: vc(-16);
+            top: vc(-16);
+            bottom: 0;
+            height: 100vh;
+            height: var(--vh);
+            background: url("../assets/images/menu.jpg") center center no-repeat;
+            background-size: cover;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s linear;
+
+            .is-menu-opened & {
+                opacity: 1;
+                visibility: visible;
             }
         }
     }
 
     &-link {
         position: relative;
-        top: 6px;
+        z-index: 1;
         display: flex;
         align-items: center;
         font-weight: 700;
@@ -59,6 +103,64 @@
             margin-right: 12px;
             width: 20px;
             height: 20px;
+
+            @include devices {
+                margin-right: 24px;
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        @include desktop {
+            position: relative;
+            top: 6px;
+        }
+    }
+
+    @include devices {
+        padding: vc(16);
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+
+        @include devices {
+            margin-top: 7px;
+        }
+    }
+
+    &-burger {
+        position: relative;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+
+        svg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transition: all 0.2s linear;
+
+            &:first-child {
+
+            }
+
+            &:last-child {
+                transform: scale(0);
+            }
+
+            .is-menu-opened & {
+                &:first-child {
+                    transform: scale(0);
+                }
+
+                &:last-child {
+                    transform: scale(1);
+                }
+            }
         }
     }
 }

@@ -23,12 +23,33 @@
         display: flex;
         flex-wrap: wrap;
         gap: 15px;
+
+        @include devices {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
     }
 
     &--right {
-        display: flex;
-        flex-flow: column;
-        align-items: flex-end;
+        @include desktop {
+            display: flex;
+            flex-flow: column;
+            align-items: flex-end;
+        }
+    }
+
+    @include devices {
+        padding: 0 vc(16);
+        max-width: 100%;
+
+        &--cases {
+            margin-top: 159px;
+        }
+
+        &--partners {
+            flex-wrap: wrap;
+            overflow: initial;
+        }
     }
 }
 
@@ -58,6 +79,11 @@
         font-weight: 800;
         font-size: 80px;
         line-height: 90px;
+
+        @include devices {
+            font-size: 48px;
+            line-height: 52px;
+        }
     }
 
     &-xl {
@@ -76,6 +102,11 @@
         font-weight: 700;
         font-size: 32px;
         line-height: 40px;
+
+        @include devices {
+            font-size: 24px;
+            line-height: 32px;
+        }
     }
 
     &-xsm {
@@ -85,7 +116,9 @@
     }
 
     &-width-50 {
-        width: 51.5%;
+       @include desktop {
+           width: 51.5%;
+       }
     }
 }
 
@@ -94,12 +127,23 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 28px;
+
+        @include devices {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 
     &-xlg {
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
+
+        @include devices {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &-xl {
@@ -232,6 +276,10 @@
 
 .mb-10 {
     margin-bottom: 10px;
+
+    @include devices {
+        margin-bottom: 5px;
+    }
 }
 
 .mb-11 {
@@ -257,6 +305,10 @@
 
 .mb-49 {
     margin-bottom: 49px;
+
+    @include devices {
+        margin-bottom: 40px;
+    }
 }
 
 .mb-14-3 {
@@ -265,6 +317,10 @@
 
 .mb-16-52 {
     margin: 16px 0 52px;
+
+    @include devices {
+        margin-bottom: 32px;
+    }
 }
 
 .letter-spacing-008 {
@@ -327,6 +383,12 @@ a.link {
     &-4 {
         padding: 32px 24px;
         flex: 1 1 calc((100% / 4) - 15px);
+
+        @include devices {
+            flex: auto;
+            width: 280px;
+            min-height: 288px;
+        }
     }
 
     &-3 {
@@ -336,19 +398,44 @@ a.link {
         justify-content: center;
         padding: 40px 57px;
         flex: 1 1 calc((100% / 3) - 15px);
+
+        @include devices {
+            flex: auto;
+            padding: 40px 44px;
+            width: 280px;
+            height: 157px;
+        }
     }
 
     &-2 {
         padding: 48px;
         width: 496px;
         flex-shrink: 0;
+
+        @include devices {
+            margin-bottom: 47px;
+            padding: 24px;
+            width: 100%;
+        }
     }
 
     &-line {
         display: flex;
         align-items: center;
         padding: 16px 20px;
-        width: 560px;
+
+        @include desktop {
+            width: 560px;
+        }
+    }
+
+    @include devices {
+        flex-shrink: 0;
+
+        &--parnters {
+            padding: 32px 0;
+            height: auto;
+        }
     }
 }
 
@@ -358,21 +445,23 @@ a.link {
     flex: 1 1 calc((100% / 3) - 15px);
 
     &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        background: linear-gradient(180deg, #6EB738 0%, #148F6F 100%);
-        filter: blur(200px);
-        -webkit-backface-visibility: hidden;
-        -webkit-perspective: 1000;
-        backface-visibility: hidden;
-        perspective: 1000;
-        transform: translate3d(0,0,0);
-        transform: translateZ(0);
+        @include desktop {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: linear-gradient(180deg, #6EB738 0%, #148F6F 100%);
+            filter: blur(200px);
+            -webkit-backface-visibility: hidden;
+            -webkit-perspective: 1000;
+            backface-visibility: hidden;
+            perspective: 1000;
+            transform: translate3d(0, 0, 0);
+            transform: translateZ(0);
+        }
 
     }
 
@@ -409,29 +498,57 @@ a.link {
             transform: rotate(-89.26deg);
         }
     }
+
+    @include devices {
+        padding-top: 237px;
+        margin-top: -66px;
+    }
 }
 
 
 .item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 60px;
+    position: relative;
 
-    &--2 {
-        margin-right: 60px;
-    }
+    @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 60px;
 
-    &--3 {
-        .card {
-            margin-top: -65px;
+        &--2 {
+            margin-right: 60px;
+        }
+
+        &--3 {
+
+
+            .card {
+
+                margin-top: -65px;
+            }
+        }
+
+        &--4 {
+            .card {
+                margin-top: -133px;
+                margin-right: 60px;
+            }
         }
     }
 
-    &--4 {
-        .card {
-            margin-top: -133px;
-            margin-right: 60px;
+    @include devices {
+        &--3 {
+            .card {
+                position: relative;
+                z-index: 3;
+            }
+        }
+
+        &--4 {
+            .card {
+                position: relative;
+                z-index: 4;
+            }
         }
     }
 }
@@ -459,7 +576,7 @@ a.link {
         -webkit-perspective: 1000;
         backface-visibility: hidden;
         perspective: 1000;
-        transform: translate3d(0,0,0);
+        transform: translate3d(0, 0, 0);
         transform: translateZ(0);
 
     }
@@ -472,6 +589,13 @@ a.link {
             width: 433px;
             height: 193px;
             transform: rotate(-5.1deg);
+        }
+
+        @include devices {
+            top: -143px;
+            left: -90px;
+            width: 499.25px;
+            height: 366.29px;
         }
     }
 
@@ -487,6 +611,14 @@ a.link {
 
             transform: rotate(-97.44deg);
         }
+
+        @include devices {
+            left: 88px;
+            top: -91px;
+            z-index: 2;
+            width: 438px;
+            height: 384px;
+        }
     }
 
     &--3 {
@@ -497,6 +629,15 @@ a.link {
             width: 339.68px;
             height: 193px;
             transform: rotate(-71.63deg);
+        }
+
+        @include devices {
+            top: -89px;
+            left: -156px;
+            z-index: 2;
+            transform: scaleX(-1);
+            width: 395px;
+            height: 396px;
         }
     }
 
@@ -509,6 +650,18 @@ a.link {
             height: 193px;
             transform: rotate(-82.78deg);
         }
+
+        @include devices {
+            z-index: 3;
+            left: 75px;
+            top: -8px;
+            width: 475px;
+            height: 474px;
+        }
+    }
+
+    @include devices {
+        position: absolute;
     }
 }
 
@@ -541,6 +694,11 @@ a.link {
         margin-right: 16px;
         width: 68px;
         height: 68px;
+
+        @include devices {
+            width: 48px;
+            height: 48px;
+        }
     }
 
     &-20 {
@@ -581,9 +739,17 @@ a.link {
         -webkit-perspective: 1000;
         backface-visibility: hidden;
         perspective: 1000;
-        transform: translate3d(0,0,0);
+        transform: translate3d(0, 0, 0);
         transform: translateZ(0) rotate(-75.13deg);
 
+    }
+
+    @include devices {
+        left: -81%;
+        top: -23%;
+        width: 1384.54px;
+        height: 1308.54px;
+        transform: rotate(5.96deg);
     }
 }
 
@@ -622,13 +788,26 @@ a.link {
         background: linear-gradient(180deg, #6EB738 0%, #148F6F 100%);
         filter: blur(200px);
         transform: rotate(-75.13deg);
+
+        @include devices {
+            width: 390.55px;
+            height: 271.99px;
+            transform: rotate(-89.01deg);
+        }
+    }
+
+    @include devices {
+        width: 493.97px;
+        height: auto;
+        left: 24%;
+        top: -15%;
     }
 }
 
 .faq {
     padding: 24px;
     margin-bottom: 12px;
-    width: 51.5%;
+
 
     &.is-active {
         svg {
@@ -653,6 +832,20 @@ a.link {
     &-description {
         display: none;
         margin-top: 12px;
+
+        @include devices {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    @include desktop {
+
+        width: 51.5%;
+    }
+
+    @include devices {
+        padding: 16px;
     }
 }
 
@@ -664,6 +857,11 @@ a.link {
     margin: 0 auto;
     padding: 60px 0;
     width: 880px;
+
+    @include devices {
+        padding: 40px 16px;
+        width: 100%;
+    }
 }
 
 .img {
@@ -672,6 +870,11 @@ a.link {
     &--1 {
         top: -32%;
         left: -15%;
+
+        @include devices {
+            top: -24%;
+            left: -79%;
+        }
     }
 
     &--2 {
@@ -679,6 +882,14 @@ a.link {
         top: -6%;
         z-index: 3;
 
+        @include devices {
+            right: -51%;
+            top: 31%;
+            z-index: 3;
+            width: 319.07px;
+            height: 268.07px;
+            transform: rotate(6.02deg);
+        }
     }
 }
 
@@ -697,7 +908,7 @@ a {
     -webkit-perspective: 1000;
     backface-visibility: hidden;
     perspective: 1000;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
     transform: translateZ(0);
 
     &-image {

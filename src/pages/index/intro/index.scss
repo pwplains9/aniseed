@@ -1,12 +1,7 @@
 
 
 .sphere {
-    position: absolute;
-    top: -19%;
-    right: 50%;
-    transform: translateX(81%);
-    width: 1442px;
-    height: 1419px;
+
 
     img {
         width: 100%;
@@ -43,16 +38,47 @@
         &--1 {
             top: 27%;
             right: 57%;
+
+            @include devices {
+                top: 19%;
+                right: 55%;
+            }
         }
 
         &--2 {
             top: 39.5%;
             right: 63.5%;
+
+            @include devices {
+                top: 44.5%;
+                right: 25.5%;
+            }
         }
 
         &--3 {
             top: 47.5%;
             right: 50%;
+
+            @include devices {
+                top: 81%;
+                right: 38.5%;
+            }
         }
+    }
+
+    @include desktop {
+        position: absolute;
+        top: -19%;
+        right: 50%;
+        transform: translateX(81%);
+        width: 1442px;
+        height: 1419px;
+    }
+
+    @include devices {
+        transform: translate(-21%, -6px);
+        width: vc(637);
+        height: vc(626.84);
+        margin-bottom: -109px;
     }
 }

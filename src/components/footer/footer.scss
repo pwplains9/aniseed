@@ -2,6 +2,10 @@
     &-logo {
         width: 85.71px;
         height: 32px;
+
+        @include devices {
+            order: 1;
+        }
     }
 
     &-copyright {
@@ -9,6 +13,11 @@
         font-size: 12px;
         line-height: 16px;
         opacity: 0.6;
+
+        @include devices {
+            order: 3;
+            margin-top: 16px;
+        }
     }
 
     &-links {
@@ -21,7 +30,16 @@
 
             &:first-child {
                 margin-right: 44px;
+
+                @include devices {
+                    margin-right: 25px;
+                }
             }
+        }
+
+        @include devices {
+            order: 2;
+            padding: 14px 0 0 0;
         }
     }
 
@@ -43,10 +61,23 @@
             width: 16px;
             height: 16px;
         }
+
+        @include devices {
+            order: 4;
+            margin-top: 16px;
+        }
+    }
+
+    @include devices {
+        padding: 0 16px;
     }
 }
 
 .border {
     border-top: 1px solid rgba($color-white, 0.34);
     padding: 24px 0 40px;
+
+    @include devices {
+        padding: 16px 0 20px;
+    }
 }
