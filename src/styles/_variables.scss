@@ -1,18 +1,19 @@
 // stylelint-disable scss/dollar-variable-empty-line-before
 
 // COLORS
-$color-black: #1C2329;
+$color-black: #212429;
 $color-white: #fff;
 $color-gray: #171717;
 $color-gray2: #2c2c2c;
 $color-light: #b7b7b7;
 $color-red: #FF5757;
-$gradient: linear-gradient(180deg, #6EB738 0%, #148F6F 100%);
+$gradient: linear-gradient(135deg, #66FF00 0%, #16B862 51.88%, #00858F 100%);
 
 // FONTS
 // stylelint-disable-next-line
 $font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 $font-Poppins: 'Poppins';
+$font-Montserrat: 'Montserrat';
 
 // EASING TRANSITIONS
 $duration-normal: 0.4s;

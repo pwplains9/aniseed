@@ -4,7 +4,4 @@
 //@include font-face("../fonts/Popins/Poppins-Medium", "Popins", 500, normal);
 //@include font-face("../fonts/Popins/Poppins-Bold", "Popins", 700, normal);
 //@include font-face("../fonts/Popins/Poppins-ExtraBold", "Popins", 900, normal);
-@include font-face("Poppins", 400);
-@include font-face("Poppins", 500);
-@include font-face("Poppins", 700);
-@include font-face("Poppins", 800);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');

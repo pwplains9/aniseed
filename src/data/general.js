@@ -3,16 +3,16 @@ import { config } from '../../config';
 const domain = config.html.domain;
 const baseDir = config.html.isProd() ? config.html.publicPath : config.html.publicPathDev;
 const share = {
-    title: 'Test',
-    description: 'test 2',
+    title: 'BeneMobile - Mobile Advertising Network',
+    description: 'Programmatic and ADnetworks management for yours app growth. CPA/CPI cooperation models. Work with experts.',
 };
 
 export default {
     domain,
     baseDir,
-    title: '',
-    description: '',
-    keywords: '',
+    title: 'BeneMobile - Mobile Advertising Network',
+    description: 'Programmatic and ADnetworks management for yours app growth. CPA/CPI cooperation models. Work with experts. ',
+    keywords: 'Programmatic and ADnetworks management for yours app growth. CPA/CPI cooperation models. Work with experts. ',
     image: `${domain}assets/images/share/vk.jpg`,
     link: {
         appleTouchIcon180x180: `${baseDir}favicon/apple-touch-icon.png`,

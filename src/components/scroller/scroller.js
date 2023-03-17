@@ -80,16 +80,16 @@ const init = () => {
     scroller = new LocomotiveScroll({
         el: $scroller,
         smooth: true,
-        lerp: 0.3,
-        multiplier: isDevices ? 1.25 : 1,
+        lerp: 0.5,
+        multiplier: isDevices ? 1.25 : 2.5,
         // firefoxMultiplier: isDevices ? 62 : 100,
         // touchMultiplier: isDevices ? 2.25 : 2,
         scrollFromAnywhere: true,
         tablet: {
-            smooth: true,
+            smooth: false,
         },
         smartphone: {
-            smooth: true,
+            smooth: false,
         },
     });
 

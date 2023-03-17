@@ -24,7 +24,7 @@ html {
     overflow-x: hidden;
     min-height: 100vh;
     box-sizing: border-box;
-    font-family: $font-Poppins;
+    font-family: $font-Montserrat;
     scroll-behavior: smooth;
 
     &.has-cursor,
@@ -40,11 +40,6 @@ html {
 }
 
 body {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
     -webkit-font-smoothing: antialiased;
     text-decoration-skip: objects;
     text-rendering: optimizeLegibility;
@@ -52,6 +47,19 @@ body {
     -webkit-tap-highlight-color: transparent;
     color: $color-white;
     background: $color-black;
+
+    @include desktop {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    @include devices {
+        width: 100vw;
+        overflow-x: hidden;
+    }
 }
 
 main {

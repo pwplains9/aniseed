@@ -1,28 +1,41 @@
 .section {
     &--1 {
-        padding-top: 201px;
+        padding-top: 187px;
         padding-bottom: 157px;
 
         @include devices {
-            padding-top: 116px;
-            padding-bottom: 0;
+            padding-top: vc(150);
+            padding-bottom: 120px;
+            //height: 100vh;
+            //height: var(--vh);
+            //
+            //.header + .container {
+            //    position: absolute;
+            //    bottom: 30px;
+            //}
+
+            .is-lock-scroll & {
+                z-index: 9999;
+            }
         }
     }
 
     &--2 {
+        padding-top: 69px;
 
-        padding-bottom: 180px;
 
         @include devices {
-            padding-bottom: 120px;
+            padding-top: 0;
         }
     }
 
     &--3 {
-        padding-bottom: 156px;
+        z-index: 3;
+        padding-top: 167px;
 
         @include devices {
-            padding-bottom: 120px;
+            padding-top: 98px;
+            padding-bottom: 87px;
         }
     }
 
@@ -39,36 +52,36 @@
     }
 
     &--6 {
-        padding-top: 237px;
+        z-index: 2;
+        padding-top: 150px;
 
         @include devices {
-            padding-top: 109px;
+            padding-top: 0;
         }
     }
 
     &--7 {
-        padding-top: 200px;
+        padding-top: 169px;
 
         @include devices {
-            padding-top: 120px;
+            padding-top: 96px;
         }
     }
 
     &--8 {
-        padding-top: 217px;
-        padding-bottom: 116px;
+        padding-top: 168px;
+        padding-bottom: 0;
 
         @include devices {
             padding-top: 107px;
-            padding-bottom: 100px;
+            padding-bottom: 78px;
         }
     }
 }
 
 @import "intro/index";
-@import "cards/index";
-@import "climate/index";
-@import "howworks/index";
-@import "partners/index";
-@import "faq/index";
-@import "joinus/index";
+@import "features/index";
+@import "technology/index";
+@import "cooperation/index";
+@import "contacts/index";
+

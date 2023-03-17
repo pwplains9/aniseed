@@ -20,6 +20,7 @@ const goToPage = (e) => {
     }
 };
 
+
 const setActiveLink = (page) => {
     $link.forEach(($linkCurrent) => {
         $linkCurrent.classList.toggle('is-active', page === $linkCurrent.dataset.page);
@@ -132,6 +133,10 @@ function init() {
         //     $linkCurrent.addEventListener('mouseleave', linkHover);
         // }
     });
+
+    $('.inner .button').on('click', (e) => {
+        goToPage(e);
+    })
 }
 
 function destroy() {
